@@ -24,7 +24,7 @@ class _AddPictureState extends State<AddPicture> {
   void selectImageFromGallery() async {
     final pickedFile = await ImagePicker().pickImage(source: ImageSource.gallery);
     if (pickedFile != null) {
-      setState(() {
+      setState(() async {
         _image = Uint8List.fromList(await pickedFile.readAsBytes());
       });
     }
@@ -33,7 +33,7 @@ class _AddPictureState extends State<AddPicture> {
   void selectImageFromCamera() async {
     final pickedFile = await ImagePicker().pickImage(source: ImageSource.camera);
     if (pickedFile != null) {
-      setState(() {
+      setState(() async {
         _image = Uint8List.fromList(await pickedFile.readAsBytes());
       });
     }
