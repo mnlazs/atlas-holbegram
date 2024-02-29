@@ -8,7 +8,7 @@ class TextFieldInput extends StatelessWidget {
   final TextInputType keyboardType;
 
   const TextFieldInput({
-    super.key, // Uso de parámetro super para la llave
+    super.key,
     required this.controller,
     required this.isPassword,
     required this.hintText,
@@ -21,10 +21,10 @@ class TextFieldInput extends StatelessWidget {
     return TextField(
       keyboardType: keyboardType,
       controller: controller,
-      cursorColor: const Color.fromARGB(218, 226, 37, 24), // const añadido aquí
+      cursorColor: const Color.fromARGB(218, 226, 37, 24), 
       decoration: InputDecoration(
         hintText: hintText,
-        border: const OutlineInputBorder( // const añadido aquí
+        border: const OutlineInputBorder(
           borderSide: BorderSide.none,
         ),
         focusedBorder: const OutlineInputBorder( // const añadido aquí
