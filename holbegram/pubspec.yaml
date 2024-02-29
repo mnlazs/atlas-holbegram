@@ -89,10 +89,10 @@ flutter:
   # example:
   fonts:
   - family: Billabong
-      fonts:
-        - asset: assets/fonts/Billabong.ttf
-        - asset: assets/fonts/InstagramSans.ttf
-  #   - family: Schyler
+    fonts:
+      - asset: assets/fonts/Billabong.ttf
+      - asset: assets/fonts/InstagramSans.ttf
+  #  - family: Schyler
   #     fonts:
   #       - asset: fonts/Schyler-Regular.ttf
   #       - asset: fonts/Schyler-Italic.ttf
