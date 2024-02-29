@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'login_screen.dart'; // Asegúrate de que la ruta de importación sea correcta
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({super.key});
@@ -17,11 +18,12 @@ class _SignUpScreenState extends State<SignUpScreen> {
   @override
   void initState() {
     super.initState();
-    _passwordVisible = true; // Asegúrate de que la visibilidad inicial de la contraseña esté configurada según tus necesidades
+    _passwordVisible = true; // Configura la visibilidad inicial de la contraseña
   }
 
   @override
   void dispose() {
+    // Limpia los controladores cuando el widget sea desmontado
     emailController.dispose();
     usernameController.dispose();
     passwordController.dispose();
@@ -29,26 +31,32 @@ class _SignUpScreenState extends State<SignUpScreen> {
     super.dispose();
   }
 
- @override
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            // Otros campos de texto aquí (email, username)
+            // Aquí puedes agregar otros widgets como el título de la aplicación, imágenes, etc.
+            TextField(
+              controller: emailController,
+              decoration: const InputDecoration(labelText: 'Email'),
+            ),
+            TextField(
+              controller: usernameController,
+              decoration: const InputDecoration(labelText: 'Username'),
+            ),
             TextField(
               controller: passwordController,
-              obscureText: !_passwordVisible, // Usa _passwordVisible para controlar la visibilidad
+              obscureText: !_passwordVisible,
               decoration: InputDecoration(
                 labelText: 'Password',
                 suffixIcon: IconButton(
                   icon: Icon(
-                    // Cambia el icono dependiendo de si el texto es visible o no
                     _passwordVisible ? Icons.visibility : Icons.visibility_off,
                   ),
                   onPressed: () {
-                    // Cambia el estado de _passwordVisible cuando se presiona el botón
                     setState(() {
                       _passwordVisible = !_passwordVisible;
                     });
@@ -58,7 +66,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
             ),
             TextField(
               controller: passwordConfirmController,
-              obscureText: !_passwordVisible, // Usa _passwordVisible para controlar la visibilidad
+              obscureText: !_passwordVisible,
               decoration: InputDecoration(
                 labelText: 'Confirm Password',
                 suffixIcon: IconButton(
@@ -73,7 +81,23 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 ),
               ),
             ),
-            // Botón de registro y otros widgets aquí
+            // Botón para enviar el formulario de registro
+            ElevatedButton(
+              onPressed: () {
+                // Aquí implementas la lógica para el registro
+              },
+              child: const Text('Sign Up'),
+            ),
+            // Botón para navegar de vuelta a la pantalla de inicio de sesión
+            TextButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const LoginScreen()),
+                );
+              },
+              child: const Text('Log in'),
+            ),
           ],
         ),
       ),
