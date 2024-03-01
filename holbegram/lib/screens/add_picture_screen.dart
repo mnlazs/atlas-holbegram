@@ -8,11 +8,11 @@ class AddPicture extends StatefulWidget {
   final String username;
 
   const AddPicture({
-    Key? key,
+    super.key, // Uso correcto de super parámetros para 'key'
     required this.email,
     required this.password,
     required this.username,
-  }) : super(key: key);
+  });
 
   @override
   _AddPictureState createState() => _AddPictureState();
@@ -53,10 +53,10 @@ class _AddPictureState extends State<AddPicture> {
           children: [
             // Muestra la imagen seleccionada o un ícono de usuario por defecto
             _image != null
-              ? Image.memory(_image!, width: 200, height: 200)
-              : const Icon(Icons.account_circle, size: 200),
+                ? Image.memory(_image!, width: 200, height: 200)
+                : const Icon(Icons.account_circle, size: 200),
             const SizedBox(height: 20), // Espacio entre imagen y botones
-            // Botones reemplazados por iconos para seleccionar imagen de galería o cámara
+            // Botones para seleccionar imagen de galería o cámara
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
