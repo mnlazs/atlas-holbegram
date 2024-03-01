@@ -59,7 +59,8 @@ class MyApp extends StatelessWidget {
   }
 }
 
-### Firebase Integration
+```
+## Firebase Integration
 
 [Firebase](https://firebase.google.com/) is a comprehensive platform provided by Google that offers various backend services for mobile and web applications. It provides features such as real-time database, authentication, cloud storage, hosting, and more, making it easier to develop and scale your applications.
 
