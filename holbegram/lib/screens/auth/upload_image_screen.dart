@@ -21,20 +21,22 @@ class AddPicture extends StatefulWidget {
 class _AddPictureState extends State<AddPicture> {
   Uint8List? _image;
 
-  void selectImageFromGallery() async {
+  Future<void> selectImageFromGallery() async {
     final pickedFile = await ImagePicker().pickImage(source: ImageSource.gallery);
     if (pickedFile != null) {
-      setState(() async {
-        _image = Uint8List.fromList(await pickedFile.readAsBytes());
+      final bytes = await pickedFile.readAsBytes();
+      setState(() {
+        _image = Uint8List.fromList(bytes);
       });
     }
   }
 
-  void selectImageFromCamera() async {
+  Future<void> selectImageFromCamera() async {
     final pickedFile = await ImagePicker().pickImage(source: ImageSource.camera);
     if (pickedFile != null) {
-      setState(() async {
-        _image = Uint8List.fromList(await pickedFile.readAsBytes());
+      final bytes = await pickedFile.readAsBytes();
+      setState(() {
+        _image = Uint8List.fromList(bytes);
       });
     }
   }
@@ -49,15 +51,26 @@ class _AddPictureState extends State<AddPicture> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            if (_image != null)
-              Image.memory(_image!, width: 200, height: 200),
-            ElevatedButton(
-              onPressed: selectImageFromGallery,
-              child: const Text('Select from Gallery'),
-            ),
-            ElevatedButton(
-              onPressed: selectImageFromCamera,
-              child: const Text('Take a Picture'),
+            // Muestra la imagen seleccionada o un ícono de usuario por defecto
+            _image != null
+              ? Image.memory(_image!, width: 200, height: 200)
+              : const Icon(Icons.account_circle, size: 200),
+            const SizedBox(height: 20), // Espacio entre imagen y botones
+            // Botones reemplazados por iconos para seleccionar imagen de galería o cámara
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                IconButton(
+                  icon: const Icon(Icons.photo_library),
+                  onPressed: selectImageFromGallery,
+                  tooltip: 'Select from Gallery',
+                ),
+                IconButton(
+                  icon: const Icon(Icons.camera_alt),
+                  onPressed: selectImageFromCamera,
+                  tooltip: 'Take a Picture',
+                ),
+              ],
             ),
           ],
         ),
