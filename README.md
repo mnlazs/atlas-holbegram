@@ -2,21 +2,21 @@
 
 # Final Flutter Project
 
-## Welcome, Holbies!
+## Welcome, Holbies! :wave:
 
 Welcome to the final Flutter Project. This journey is designed to be special, challenging, yet immensely rewarding. As we embark on developing a mobile application, we're stepping into a complex arena that requires dedication, creativity, and a keen understanding of the tools at our disposal.
 
-### Why Flutter?
+### Why Flutter? :sparkles:
 
 Developing a mobile application that supports both Android and iOS traditionally requires coding in two distinct languages using separate frameworks. This is where Flutter makes a significant difference. It's a high-performance framework based on the Dart language, enabling the development of cross-platform applications with ease. By rendering the UI directly on the operating system's canvas, Flutter ensures optimal performance and a smooth user experience across both platforms.
 
-### Motivation
+### Motivation :muscle:
 
 We understand the challenges that come with such a sophisticated project, especially with limited Flutter knowledge. But remember, we are Holberton students, and there's nothing we can't achieve when we put our minds to it. We believe in you and your ability to conquer this challenge.
 
-### Let's Begin the Journey
+### Let's Begin the Journey :rocket:
 
-#### Resources
+#### Resources :books:
 
 To aid in your project, here are some valuable resources:
 
@@ -29,7 +29,7 @@ To aid in your project, here are some valuable resources:
 - [Introduction to widgets](https://docs.flutter.dev/ui)
 - [Firebase Storage Load and Display Images | Flutter](https://www.youtube.com/watch?v=AQQJJw3zOqs)
 
-#### Example Code
+#### Example Code :computer:
 
 Here's a simple example to get you started with Flutter and Firebase:
 
@@ -59,7 +59,7 @@ class MyApp extends StatelessWidget {
   }
 }
 
-```
+
 ## Firebase Integration
 
 [Firebase](https://firebase.google.com/) is a comprehensive platform provided by Google that offers various backend services for mobile and web applications. It provides features such as real-time database, authentication, cloud storage, hosting, and more, making it easier to develop and scale your applications.
