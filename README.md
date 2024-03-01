@@ -12,7 +12,7 @@ Developing a mobile application that supports both Android and iOS traditionally
 
 ### Motivation
 
-We understand the challenges that come with such a sophisticated project, especially with limited Flutter knowledge. But remember, we are Holberton students, and there's nothing we can't achieve when we put our minds to it. We believe in you and your ability to conquer this challenge. To get started and lighten up your mood, click on this [LINK](#).
+We understand the challenges that come with such a sophisticated project, especially with limited Flutter knowledge. But remember, we are Holberton students, and there's nothing we can't achieve when we put our minds to it. We believe in you and your ability to conquer this challenge.
 
 ### Let's Begin the Journey
 
