@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:holbegram/models/post.dart';
+import 'package:holbegram/models/post.dart'; // Asegúrate de que este import sea correcto.
 
 class Feed extends StatelessWidget {
   const Feed({super.key});
@@ -10,12 +10,12 @@ class Feed extends StatelessWidget {
       appBar: AppBar(
         title: Row(
           children: [
-            Image.asset( // Añade const aquí
+            Image.asset( // Añade const aquí si todos los parámetros son constantes
               'assets/logo.png',
               fit: BoxFit.cover,
               height: 30,
             ),
-            const Text( // Añade const aquí
+            const Text( 
               'Holbegram',
               style: TextStyle(
                 fontFamily: 'Billabong',
@@ -35,7 +35,7 @@ class Feed extends StatelessWidget {
           ),
         ],
       ),
-      body: Posts(), // Asegúrate de que Posts esté definido e importado
+      body: const Posts(),
     );
   }
 }
