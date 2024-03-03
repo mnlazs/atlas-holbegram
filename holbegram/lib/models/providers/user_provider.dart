@@ -1,6 +1,6 @@
 import 'package:flutter/foundation.dart';
-import '../methods/auth_methods.dart';
-import '../models/user.dart';
+import '../../methods/auth_methods.dart';
+import '../user.dart';
 
 class UserProvider with ChangeNotifier {
   Users? _user;

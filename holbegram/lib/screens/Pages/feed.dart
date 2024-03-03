@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:holbegram/models/post.dart';
 
-
 class Feed extends StatelessWidget {
   const Feed({super.key});
 
@@ -11,7 +10,7 @@ class Feed extends StatelessWidget {
       appBar: AppBar(
         title: Row(
           children: [
-            const Image.asset( // Añade const aquí
+            Image.asset( // Añade const aquí
               'assets/logo.png',
               fit: BoxFit.cover,
               height: 30,
